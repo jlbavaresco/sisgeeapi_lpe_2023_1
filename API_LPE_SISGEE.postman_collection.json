@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "b2a7d9c1-2ba4-4365-8fb8-5114c4e530e7",
+		"_postman_id": "dc4d7607-8f8c-4bc9-af49-1738e1af6c56",
 		"name": "API_LPE_SISGEE",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,11 +11,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3002/predios",
+					"raw": "https://sisgeeapilpe20231.onrender.com/predios",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"sisgeeapilpe20231",
+						"onrender",
+						"com"
 					],
-					"port": "3002",
 					"path": [
 						"predios"
 					]
@@ -38,11 +40,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3002/predios",
+					"raw": "https://sisgeeapilpe20231.onrender.com/predios",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"sisgeeapilpe20231",
+						"onrender",
+						"com"
 					],
-					"port": "3002",
 					"path": [
 						"predios"
 					]
@@ -110,6 +114,116 @@
 					"path": [
 						"predios",
 						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get salas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/salas",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSala",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"numero\": 510,\n        \"descricao\": \"Laboratório\",\n        \"capacidade\": 20,\n        \"predio\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/salas",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"codigo\": 3,\n        \"numero\": 510,\n        \"descricao\": \"mudei\",\n        \"capacidade\": 20,\n        \"predio\": 1\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/salas",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sala por codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/salas/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete sala",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/salas/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"salas",
+						"4"
 					]
 				}
 			},
