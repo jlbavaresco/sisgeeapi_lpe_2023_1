@@ -9,15 +9,20 @@
 			"name": "getPredios",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImVtYWlsIjoiam9yZ2ViYXZhcmVzY29AaWZzdWwuZWR1LmJyIiwidGlwbyI6IkEiLCJ0ZWxlZm9uZSI6Iig1NCk3Nzc4LTA5ODg3Iiwibm9tZSI6IkpvcmdlIn0sImlhdCI6MTY4MjYwMzgyNiwiZXhwIjoxNjgyNjA0MTI2fQ.9d6DhB4kSwAJ8SkHfdFXtSRT7bs4UUFuWGUm3xNAcGU",
+						"type": "default"
+					}
+				],
 				"url": {
-					"raw": "https://sisgeeapilpe20231.onrender.com/predios",
-					"protocol": "https",
+					"raw": "http://localhost:3002/predios",
+					"protocol": "http",
 					"host": [
-						"sisgeeapilpe20231",
-						"onrender",
-						"com"
+						"localhost"
 					],
+					"port": "3002",
 					"path": [
 						"predios"
 					]
@@ -29,7 +34,13 @@
 			"name": "AddPredios",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImVtYWlsIjoiam9yZ2ViYXZhcmVzY29AaWZzdWwuZWR1LmJyIiwidGlwbyI6IkEiLCJ0ZWxlZm9uZSI6Iig1NCk3Nzc4LTA5ODg3Iiwibm9tZSI6IkpvcmdlIn0sImlhdCI6MTY4MjYwMzgyNiwiZXhwIjoxNjgyNjA0MTI2fQ.9d6DhB4kSwAJ8SkHfdFXtSRT7bs4UUFuWGUm3xNAcGU",
+						"type": "default"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"nome\" : \"Prédio 6\",\n    \"descricao\" : \"Prédio novo\", \n    \"sigla\" : \"P6\"\n}",
@@ -40,13 +51,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://sisgeeapilpe20231.onrender.com/predios",
-					"protocol": "https",
+					"raw": "http://localhost:3002/predios",
+					"protocol": "http",
 					"host": [
-						"sisgeeapilpe20231",
-						"onrender",
-						"com"
+						"localhost"
 					],
+					"port": "3002",
 					"path": [
 						"predios"
 					]
@@ -224,6 +234,34 @@
 					"path": [
 						"salas",
 						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"email\" : \"jorgebavaresco@ifsul.edu.br\" , \"senha\" : \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"login"
 					]
 				}
 			},

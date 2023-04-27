@@ -2,6 +2,8 @@ const { getPrediosDB, addPredioDB, updatePredioDB, deletePredioDB,
     getPredioPorCodigoDB } = require('../useCases/prediosUseCases');
 
 const getPredios = async (request, response) => {
+    console.log("Usando o usuário que veio decodificado na requisição: " + 
+    JSON.stringify(request.usuario))
     await getPrediosDB()
     .then(data => response.status(200).json(data))
     .catch(err => response.status(400).json({
